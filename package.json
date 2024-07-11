@@ -9,6 +9,8 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
+		"@langchain/community": "^0.2.18",
+		"@mlc-ai/web-llm": "^0.2.46",
 		"@nextui-org/button": "2.0.34",
 		"@nextui-org/card": "^2.0.31",
 		"@nextui-org/code": "2.0.29",
