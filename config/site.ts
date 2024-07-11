@@ -1,6 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 import languages from "../config/languages.json";
 
+import modelsJson from "./models.json";
 export const siteConfig = {
   name: "bitesinbyte - playground",
   description:
@@ -22,17 +23,33 @@ export const siteConfig = {
   },
   demos: [
     {
-      name: "Real Time sentiment analysis [Offline]",
+      name: "Real Time sentiment analysis",
       model: "distilbert-base-uncased-finetuned-sst-2-english",
       screenshot: "/demos/offline-sentiment-analysis.gif",
       href: "/offline-sentiment-analysis",
+      tech: ["transformer.js"],
     },
     {
-      name: "Language Translation [Offline]",
+      name: "Language Translation",
       model: "nllb-200-distilled-600M",
       screenshot: "/demos/translator.gif",
       href: "/translation",
+      tech: ["transformer.js"],
+    },
+    {
+      name: "Tokenizer",
+      screenshot: "/demos/tokenizer.gif",
+      href: "/tokenizer",
+      tech: ["ltransformer.js"],
+    },
+    {
+      name: "Local RAG",
+      model: "Phi-3-mini-4k-instruct-q4f16_1-MLC",
+      screenshot: "/demos/translator.gif",
+      href: "/rag",
+      tech: ["langchain", "web-llm"],
     },
   ],
   languages: JSON.parse(JSON.stringify(languages)),
+  models: JSON.parse(JSON.stringify(modelsJson)),
 };
