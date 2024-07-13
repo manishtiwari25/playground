@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg">
-        <div className="inline-block max-w-lg text-center justify-center">
+      <div className="p-4">
+        <div className="text-center justify-center">
           <h1 className={title({ color: "violet" })}>AI&nbsp;</h1>
           <h1 className={title()}>Playground&nbsp;</h1>
 
@@ -20,7 +20,7 @@ export default function Home() {
             Using Onnx runtime, web-llm, mlc-llm, transformer.js.
           </h2>
         </div>
-        <div className="inline-block  max-w-lg grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-4 gap-4">
           {siteConfig.demos.map((x) => (
             <Card key={x.name} isPressable onPress={() => router.push(x.href)}>
               <CardBody>
