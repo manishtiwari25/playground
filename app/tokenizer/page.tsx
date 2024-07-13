@@ -1,6 +1,5 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { Textarea } from "@nextui-org/react";
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
@@ -14,16 +13,12 @@ export default function Home() {
   const textareaRef = useRef<any>(null);
   const outputRef = useRef<any>(null);
 
-  const searchParams = useSearchParams();
-  const tokenizerParam = searchParams.get("tokenizer");
-  const textParam = searchParams.get("text");
-
   const [tokenIds, setTokenIds] = useState([]);
   const [decodedTokens, setDecodedTokens] = useState([]);
   const [margins, setMargins] = useState([]);
-  const [tokenizer, setTokenizer] = useState(tokenizerParam ?? "Xenova/gpt-4o");
+  const [tokenizer, setTokenizer] = useState("Xenova/gpt-4o");
   const [textAreaValue, setTextAreaValue] = useState(
-    textParam ?? textareaRef.current?.value ?? "",
+    textareaRef.current?.value ?? "",
   );
 
   // Create a reference to the worker object.
@@ -71,12 +66,6 @@ export default function Home() {
     },
     [tokenizer],
   );
-
-  useEffect(() => {
-    if (textParam) {
-      onInputChange({ target: { value: textParam } });
-    }
-  }, [onInputChange, textParam]);
 
   const onTokenizerChange = useCallback((e: any) => {
     const model_id = e.target.value;
