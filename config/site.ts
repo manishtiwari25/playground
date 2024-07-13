@@ -40,7 +40,14 @@ export const siteConfig = {
       name: "Tokenizer",
       screenshot: "/demos/tokenizer.gif",
       href: "/tokenizer",
-      tech: ["ltransformer.js"],
+      tech: ["transformer.js"],
+    },
+    {
+      name: "Object Detection",
+      model: "detr-resnet-50",
+      screenshot: "/demos/object-detection.gif",
+      href: "/object-detection",
+      tech: ["transformer.js"],
     },
     {
       name: "Local RAG",
