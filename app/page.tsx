@@ -3,11 +3,32 @@
 import { Card, CardBody } from "@nextui-org/card";
 import { useRouter } from "next/navigation";
 import { Image } from "@nextui-org/image";
+import { useState } from "react";
 
 import { subtitle, title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 export default function Home() {
   let router = useRouter();
+
+  const [hoverStates, setHoverStates] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  const handleMouseOver = (name: string) => {
+    setHoverStates((prevStates) => ({ ...prevStates, [name]: true }));
+  };
+
+  const handleMouseOut = (name: string) => {
+    setHoverStates((prevStates) => ({ ...prevStates, [name]: false }));
+  };
+
+  const handleFocus = (name: string) => {
+    setHoverStates((prevStates) => ({ ...prevStates, [name]: true }));
+  };
+
+  const handleBlur = (name: string) => {
+    setHoverStates((prevStates) => ({ ...prevStates, [name]: false }));
+  };
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -31,7 +52,24 @@ export default function Home() {
                       Using <span className="font-bold">{x.model}</span>
                     </h3>
                   )}
-                  <Image alt={x.name} src={x.screenshot} />
+                  <div
+                    className="relative"
+                    onBlur={() => handleBlur(x.name)}
+                    onFocus={() => handleFocus(x.name)}
+                    onMouseOut={() => handleMouseOut(x.name)}
+                    onMouseOver={() => handleMouseOver(x.name)}
+                  >
+                    {!hoverStates[x.name] && (
+                      <Image
+                        alt={x.name}
+                        className="relative"
+                        src={x.screenshot}
+                      />
+                    )}
+                    {hoverStates[x.name] && (
+                      <Image alt={x.name} className="relative" src={x.demo} />
+                    )}
+                  </div>
                 </div>
               </CardBody>
             </Card>
