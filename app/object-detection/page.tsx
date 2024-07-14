@@ -47,9 +47,8 @@ export default function ObjectDetectionPage() {
       worker.current = new Worker(
         new URL("../../workers/object-detection", import.meta.url),
       );
-    } else {
-      worker.current.addEventListener("message", onMessageReceived);
     }
+    worker.current.addEventListener("message", onMessageReceived);
 
     return () =>
       worker.current?.removeEventListener("message", onMessageReceived);

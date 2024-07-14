@@ -23,11 +23,11 @@ export const siteConfig = {
   },
   demos: [
     {
-      name: "Real Time sentiment analysis",
+      name: "Sentiment analysis",
       model: "distilbert-base-uncased-finetuned-sst-2-english",
       screenshot: "/demos/static/offline-sentiment-analysis.jpeg",
       demo: "/demos/offline-sentiment-analysis.gif",
-      href: "/offline-sentiment-analysis",
+      href: "/sentiment-analysis",
       tech: ["transformer.js"],
     },
     {
