@@ -21,7 +21,11 @@ export default function MessageBox(props: any) {
             variant="light"
             onPress={props.handleMessageSent}
           >
-            <SendIcon className="justify-center flex" height="60" width="60" />
+            <SendIcon
+              className="justify-center flex dark:invert"
+              height="60"
+              width="60"
+            />
           </Button>
         </div>
       }

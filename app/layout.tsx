@@ -45,11 +45,11 @@ export default function RootLayout({
                 isExternal
                 className="flex items-center gap-1 text-current"
                 href="https://www.github.com/manishtiwari25"
-                title="manish github"
+                title="bitesinbyte github"
               >
                 <span className="text-default-600">
                   Made with ❤️ by
-                  <span className="font-bold"> Manish</span>
+                  <span className="font-bold"> manish</span>
                 </span>
               </Link>
               <Link

@@ -57,7 +57,7 @@ export default function OfflineSentimentAnalysisPage() {
   useEffect(() => {
     if (!worker.current) {
       worker.current = new Worker(
-        new URL("../../workers/translation", import.meta.url),
+        new URL("../../workers/translation.ts", import.meta.url),
       );
     }
     worker.current.addEventListener("message", onMessageReceived);

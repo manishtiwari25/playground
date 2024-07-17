@@ -1,5 +1,5 @@
 ARG VARIANT=latest
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
+FROM --platform=linux/amd64 mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
