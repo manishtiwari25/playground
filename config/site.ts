@@ -56,10 +56,10 @@ export const siteConfig = {
     {
       name: "Local RAG",
       model: "Phi-3-mini-4k-instruct-q4f16_1-MLC",
-      screenshot: "/demos/static/translator.jpeg",
-      demo: "/demos/translator.gif",
+      screenshot: "/demos/static/local-rag.jpeg",
+      demo: "/demos/local-rag.gif",
       href: "/rag",
-      tech: ["langchain", "web-llm"],
+      tech: ["langchain", "web-llm", "transformer.js"],
     },
   ],
   languages: JSON.parse(JSON.stringify(languages)),

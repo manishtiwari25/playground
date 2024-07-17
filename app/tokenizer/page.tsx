@@ -29,7 +29,7 @@ export default function Home() {
     if (!worker.current) {
       // Create the worker if it does not yet exist.
       worker.current = new Worker(
-        new URL("../../workers/tokenizer", import.meta.url),
+        new URL("../../workers/tokenizer.ts", import.meta.url),
       );
     }
 

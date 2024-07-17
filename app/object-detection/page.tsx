@@ -13,8 +13,9 @@ export default function ObjectDetectionPage() {
   const [imageUrl, setImageUrl] = useState<string>();
   const [showModelDownloadProgressBar, setModelDownloadProgressBar] =
     useState<boolean>(false);
-  const [showAnalysing, setShowAnalysing] = useState<boolean>(false);
   const [fileName, setFileName] = useState<string>("");
+  const [showAnalysing, setShowAnalysing] = useState<boolean>(false);
+
   const [progress, setProgress] = useState<number>();
   const [detectedBoxesObject, setBoxDetectedObject] = useState<any[]>([]);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -45,7 +46,7 @@ export default function ObjectDetectionPage() {
   useEffect(() => {
     if (!worker.current) {
       worker.current = new Worker(
-        new URL("../../workers/object-detection", import.meta.url),
+        new URL("../../workers/object-detection.ts", import.meta.url),
       );
     }
     worker.current.addEventListener("message", onMessageReceived);
