@@ -1,30 +1,46 @@
 # Playground
+AI Playground is a repository where I document my journey and progress in learning about artificial intelligence.
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+Offline AI playground using ONNX(Open Neural Network Exchange) runtime, hugging face, transformer.js and more
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## Demos
+|Title|URL|
+|---|---|
+|Sentiment Analysis|[Demo](https://bitesinbyte-playground.vercel.app/sentiment-analysis)|
+|Language Translation|[Demo](https://bitesinbyte-playground.vercel.app/translation)|
+|Tokenizer|[Demo](https://bitesinbyte-playground.vercel.app/tokenizer)|
+|Object Detection|[Demo](https://bitesinbyte-playground.vercel.app/object-detection)|
+|Local RAG|[Demo](https://bitesinbyte-playground.vercel.app/rag)|
+|NER|[Demo](https://bitesinbyte-playground.vercel.app/ner)|
+|Speech Recognition|[Demo](https://bitesinbyte-playground.vercel.app/whisper)|
+
+## Docs
+
+Coming soon :)
 
 ## Technologies Used
 
 - [Next.js 14](https://nextjs.org/docs/getting-started)
 - [NextUI v2](https://nextui.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Use
+## ML Packages
+- [transformers.js](https://github.com/xenova/transformers.js)
+- [langchainjs](https://github.com/langchain-ai/langchainjs)
+- [web-llm](https://github.com/mlc-ai/web-llm)
 
-### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## Open in CodeSpace / Dev Container
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/manishtiwari25/playground?quickstart=1)
 
-### Install dependencies
+Or you can [clone](https://github.com/manishtiwari25/playground.git) the repository and open this in a [local Dev Container](https://code.visualstudio.com/docs/devcontainers/create-dev-container).
+
+## Without devContainer
+#### Install dependencies
 
 You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
@@ -32,13 +48,13 @@ You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 npm install
 ```
 
-### Run the development server
+#### Run the development server
 
 ```bash
 npm run dev
 ```
 
-### Setup pnpm (optional)
+#### Setup pnpm (optional)
 
 If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
 
@@ -47,6 +63,10 @@ public-hoist-pattern[]=*@nextui-org/*
 ```
 
 After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+
+## Questions?
+
+[Start a new Discussion](https://github.com/manishtiwari25/playground/discussions/new/choose)
 
 ## License
 
