@@ -1,9 +1,5 @@
 {
     "name": "playground",
-    "runArgs": [
-      "--userns=keep-id:uid=1000,gid=1000",
-       "--platform=linux/amd64"
-    ],
     "containerUser": "node",
     "updateRemoteUserUID": true,
     "containerEnv": {
