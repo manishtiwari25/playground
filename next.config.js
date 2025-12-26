@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
-var webpack = require('webpack');
 const nextConfig = {
     // Override the default webpack configuration
-    webpack: (config,{isServer}) => {
+    webpack: (config, { isServer, webpack }) => {
         // See https://webpack.js.org/configuration/resolve/#resolvealias
         config.resolve.alias = {
             ...config.resolve.alias,
@@ -37,4 +36,4 @@ const nextConfig = {
     },
 }
 
-module.exports = nextConfig
+export default nextConfig;

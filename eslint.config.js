@@ -25,7 +25,18 @@ export default [
             "node_modules/**",
             ".next/**", 
             "out/**",
-            "dist/**"
+            "dist/**",
+            ".now/*",
+            "*.css",
+            ".changeset",
+            "esm/*",
+            "public/*",
+            "tests/*",
+            "scripts/*",
+            "*.config.js",
+            ".DS_Store",
+            "coverage",
+            "build"
         ],
     },
     ...compat.extends(
