@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Progress } from "@nextui-org/progress";
-import { Image } from "@nextui-org/image";
-import { Link, Spinner } from "@nextui-org/react";
+import { Progress } from "@heroui/progress";
+import { Image } from "@heroui/image";
+import { Link, Spinner } from "@heroui/react";
 
 import FileUploadButton from "@/components/shared/upload-file";
 import { CancelIcon } from "@/icons/cancel";

@@ -27,6 +27,7 @@ const modelConfig = {
   model: "Phi-3-mini-4k-instruct-q4f16_1-MLC",
   chatOptions: {
     temperature: 0.5,
+    stop: ["\nInstruct:", "Instruct:", "<hr>", "\n<hr>"],
   },
 };
 const vectorstore = new MemoryVectorStore(embeddings, {});
@@ -169,10 +170,8 @@ self.addEventListener("message", async (event: { data: any }) => {
     await webllmModel.initialize((event) =>
       self.postMessage({ type: "init_progress", data: event }),
     );
-    // Best guess at Phi-3 tokens
-    chatModel = webllmModel.bind({
-      stop: ["\nInstruct:", "Instruct:", "<hr>", "\n<hr>"],
-    });
+    // Use the model directly with stop tokens configured in modelConfig
+    chatModel = webllmModel;
 
     try {
       await generateRAGResponse(event.data.messages, {

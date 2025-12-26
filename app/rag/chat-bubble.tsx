@@ -1,4 +1,4 @@
-import { Avatar } from "@nextui-org/react";
+import { Avatar } from "@heroui/react";
 
 export default function ChatBubble(props: any) {
   let messageCSS = `flex items-start gap-3 mb-3 m-1 ${props.isUserMessage ? "justify-end" : "justify-start"}`;

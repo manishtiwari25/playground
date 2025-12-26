@@ -1,4 +1,4 @@
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody } from "@heroui/react";
 
 export const Number = ({ title, count }: { title: string; count: number }) => {
   return (

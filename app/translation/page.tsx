@@ -1,14 +1,9 @@
 "use client";
 
-import {
-  Autocomplete,
-  AutocompleteItem,
-  Button,
-  Link,
-} from "@nextui-org/react";
+import { Autocomplete, AutocompleteItem, Button, Link } from "@heroui/react";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Textarea } from "@nextui-org/input";
-import { Progress } from "@nextui-org/progress";
+import { Textarea } from "@heroui/input";
+import { Progress } from "@heroui/progress";
 import toast from "react-hot-toast";
 
 import { subtitle, title } from "@/components/primitives";
@@ -127,7 +122,7 @@ export default function OfflineSentimentAnalysisPage() {
               onSelectionChange={(key) => setSourceLang(key?.toString() ?? "")}
             >
               {(lang: any) => (
-                <AutocompleteItem key={lang.code} value={lang.code}>
+                <AutocompleteItem key={lang.code}>
                   {lang.language}
                 </AutocompleteItem>
               )}
@@ -140,7 +135,7 @@ export default function OfflineSentimentAnalysisPage() {
               onSelectionChange={(key) => setDestLang(key?.toString() ?? "")}
             >
               {(lang: any) => (
-                <AutocompleteItem key={lang.code} value={lang.code}>
+                <AutocompleteItem key={lang.code}>
                   {lang.language}
                 </AutocompleteItem>
               )}

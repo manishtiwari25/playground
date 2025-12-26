@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Progress, Spinner } from "@nextui-org/react";
+import { Progress, Spinner } from "@heroui/react";
 import toast from "react-hot-toast";
 
 import MessageBox from "./message-box";

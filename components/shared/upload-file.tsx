@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, ButtonProps } from "@nextui-org/react";
+import { Button, ButtonProps } from "@heroui/react";
 import { useCallback, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -151,6 +151,7 @@ export default function FileUploadButton({
         className="hidden"
         multiple={multiple}
         name="_upload"
+        title="upload"
         type="file"
         onChange={onFileChosen}
       />
