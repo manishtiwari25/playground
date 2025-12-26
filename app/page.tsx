@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardBody } from "@nextui-org/card";
+import { Card, CardBody } from "@heroui/card";
 import { useRouter } from "next/navigation";
-import { Image } from "@nextui-org/image";
+import { Image } from "@heroui/image";
 import { useState } from "react";
 
 import { subtitle, title } from "@/components/primitives";

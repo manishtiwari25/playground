@@ -1,8 +1,8 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Textarea } from "@nextui-org/react";
-import { Tabs, Tab } from "@nextui-org/tabs";
-import { Button } from "@nextui-org/button";
+import { Textarea } from "@heroui/react";
+import { Tabs, Tab } from "@heroui/tabs";
+import { Button } from "@heroui/button";
 import Head from "next/head";
 
 import { ChangeModel } from "./change-model";

@@ -1,4 +1,4 @@
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
 
@@ -19,7 +19,7 @@ export const ChangeModel = ({
       onChange={onModelChange}
     >
       {Object.entries(TOKENIZER_OPTIONS).map(([value, label]) => (
-        <SelectItem key={value} className="dark:text-white" value={value}>
+        <SelectItem key={value} className="dark:text-white">
           {String(label)}
         </SelectItem>
       ))}

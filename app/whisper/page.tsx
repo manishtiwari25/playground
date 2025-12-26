@@ -12,9 +12,9 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { useState, useEffect, useRef } from "react";
-import { Progress } from "@nextui-org/progress";
+import { Progress } from "@heroui/progress";
 
 import { subtitle, title } from "@/components/primitives";
 import FileUploadButton from "@/components/shared/upload-file";

@@ -1,9 +1,9 @@
 "use client";
 
-import { Link } from "@nextui-org/react";
+import { Link } from "@heroui/react";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Textarea } from "@nextui-org/input";
-import { Progress } from "@nextui-org/progress";
+import { Textarea } from "@heroui/input";
+import { Progress } from "@heroui/progress";
 
 import { subtitle, title } from "@/components/primitives";
 

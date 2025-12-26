@@ -1,4 +1,4 @@
-import { Button, Textarea } from "@nextui-org/react";
+import { Button, Textarea } from "@heroui/react";
 
 import { SendIcon } from "@/icons/send";
 
