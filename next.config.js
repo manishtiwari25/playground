@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    eslint: {
+        ignoreDuringBuilds: false,
+        dirs: ['app', 'components', 'utils', 'workers']
+    },
+    typescript: {
+        ignoreBuildErrors: false,
+    },
     // Override the default webpack configuration
     webpack: (config, { isServer, webpack }) => {
         // See https://webpack.js.org/configuration/resolve/#resolvealias
